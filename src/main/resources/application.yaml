@@ -1,0 +1,23 @@
+server:
+  port:
+    8080
+
+spring:
+  application:
+    name: ecommerce-rest-api
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce
+    username: root
+    password: 314159
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+security:
+  jwt:
+    secret: 4e5339d1e867980d261260069e72d91c1a5d31ddfe6232107bda910cf1925df0
+    expiration-in-ms: 604800000000
